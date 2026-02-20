@@ -1,0 +1,90 @@
+/* Container for the entire page */
+.land-animals-container {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent overflow of the main container */
+  }
+  
+  /* Top Bar - Back button and search bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Back button styling */
+  .back-button {
+    padding: 8px 14px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #256d45;
+  }
+  
+  /* Search input field */
+  .search-input {
+    padding: 8px;
+    width: 220px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #2e8b57;
+  }
+  
+  /* Main content that will be scrollable */
+  .main-content {
+    flex-grow: 1; /* Allow this section to take up remaining space */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  /* Table container to handle horizontal scrolling */
+  .table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  
+  /* Table Styling */
+  .animals-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .animals-table th,
+  .animals-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .animals-table th {
+    background-color: #2e8b57;
+    color: white;
+  }
+  
+  .animals-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .animals-table tr:hover {
+    background-color: #ddd;
+  }
+  

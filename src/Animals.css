@@ -1,0 +1,161 @@
+/* Animals.css */
+
+.animals-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #eefdf4, #f6f9ff);
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #004d40;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #80cbc4;
+}
+
+/* Header */
+.animals-header {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeInDown 1s ease;
+}
+
+.animals-header h1 {
+  font-size: 36px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Animal Category Cards */
+.animals-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease;
+}
+
+.animal-card {
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.animal-card.land {
+  background-color: #388e3c; /* Dark green */
+}
+
+.animal-card.water {
+  background-color: #0288d1; /* Blue */
+}
+
+.animal-card.air {
+  background-color: #7b1fa2; /* Purple */
+}
+
+.animal-card.insects {
+  background-color: #f57c00; /* Orange */
+}
+
+/* Info Section */
+.animal-protection-info {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.2s ease;
+}
+
+.animal-protection-info h3 {
+  font-size: 28px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.animal-protection-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.animal-protection-info ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.animal-protection-info li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

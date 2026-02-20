@@ -1,0 +1,147 @@
+/* Resources.css */
+
+.resources-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2e7d32;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #a5d6a7;
+}
+
+/* Header */
+.resources-header {
+  text-align: center;
+  margin-top: 40px;
+  animation: slideFadeDown 1s ease;
+}
+
+.resources-header h1 {
+  font-size: 36px;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+/* Resource Cards */
+.resources-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease;
+}
+
+.resource-card {
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card.timber {
+  background-color: #4caf50; /* Green */
+}
+
+.resource-card.non-timber {
+  background-color: #8bc34a; /* Lime Green */
+}
+
+.resource-card.ecosystem {
+  background-color: #009688; /* Teal */
+}
+
+/* Info Section */
+.resources-info {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 1100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.2s ease;
+}
+
+.resources-info h3 {
+  font-size: 26px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.resources-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

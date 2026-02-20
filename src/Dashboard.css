@@ -1,0 +1,137 @@
+/* Dashboard.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e6f0ec, #f1f9f6);
+}
+
+.dashboard-container {
+  padding: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  background-color: #014421;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: slideInDown 0.6s ease-out;
+}
+
+.navbar-logo {
+  margin-right: 1rem;
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #014421;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Unique light backgrounds for each card */
+.dashboard-cards .card:nth-child(1) { background-color: #e8f5e9; }      /* Animals - light green */
+.dashboard-cards .card:nth-child(2) { background-color: #e3f2fd; }      /* Resources - light blue */
+.dashboard-cards .card:nth-child(3) { background-color: #e0f7fa; }      /* Water Bodies - aqua */
+.dashboard-cards .card:nth-child(4) { background-color: #fff3e0; }      /* Forests - light orange */
+.dashboard-cards .card:nth-child(5) { background-color: #f3e5f5; }      /* Minerals - light purple */
+.dashboard-cards .card:nth-child(6) { background-color: #fce4ec; }      /* Tourism - soft pink */
+.dashboard-cards .card:nth-child(7) { background-color: #f1f8e9; }      /* Community - mint green */
+.dashboard-cards .card:nth-child(8) { background-color: #ede7f6; }      /* Data Management - lavender */
+.dashboard-cards .card:nth-child(9) { background-color: #fff8e1; }      /* Illegal Activity Report - pale yellow */
+.dashboard-cards .card:nth-child(10) { background-color: #fce4ec; }     /* Wildlife Protection - light coral */
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  opacity: 0.95;
+}
+
+.card h2 {
+  color: #014421;
+  font-size: 1.25rem;
+}
+
+.dashboard-info {
+  margin-top: 3rem;
+  background-color: #f7fdf9;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  animation: fadeInUp 0.9s ease-in;
+}
+
+.dashboard-info h2 {
+  margin-top: 1rem;
+  color: #014421;
+}
+
+.dashboard-info ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-info li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

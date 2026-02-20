@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+  }
+  
+  .community-wrapper {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: #1d3557;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .navbar li:hover {
+    text-decoration: underline;
+  }
+  
+  .community-header {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+  }
+  
+  .tab-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #ddd;
+  }
+  
+  .tab-buttons .active {
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .tab-content {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .scroll-section {
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .ngo-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+  }
+  
+  .suggestion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .suggestion-form input,
+  .suggestion-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 1rem;
+  }
+  
+  .suggestion-form button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .suggestion-form button:hover {
+    background-color: #457b9d;
+  }
+  
+  .status-message {
+    color: #444;
+    margin-top: 10px;
+  }
+  
+  /* Make NGOs section scrollable with fixed height */
+  .ngos-section {
+    max-height: 400px; /* You can adjust this as needed */
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  /* Optional: scrollbar styling */
+  .ngos-section::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .ngos-section::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+  
