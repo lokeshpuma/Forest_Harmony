@@ -1,145 +1,212 @@
-# Forest Management System
+# 🌲 Forest Harmony — Forest Management System
 
-A comprehensive full-stack web application for managing forest resources, activities, and data. Built with modern web technologies to provide an efficient and user-friendly interface for forest management operations.
+A full-stack web application for managing forest resources, biodiversity data, water bodies, tourism, and conservation activities. Built for forest departments, wildlife authorities, and conservation organizations to monitor and manage forest ecosystems effectively.
 
-## 🌲 About
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite)](https://vitejs.dev/)
+[![Express](https://img.shields.io/badge/Express-5-000000?logo=express)](https://expressjs.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql)](https://www.mysql.com/)
 
-The Forest Management System is designed to help forest departments, conservation organizations, and environmental agencies manage and monitor forest resources effectively. This application provides tools for tracking forest data, managing activities, and generating insights for better forest conservation and management.
+---
+
+## 📖 About
+
+**Forest Harmony** provides a unified platform to:
+
+- **Track biodiversity** — Land, water, and air animals; insects; and species data
+- **Manage resources** — Timber, non-timber, minerals, and ecological & cultural services
+- **Monitor water bodies** — Rivers, lakes, streams, waterfalls, ponds, and reservoirs
+- **Support tourism** — Tourism info and records for forest areas
+- **Enable reporting** — Citizen and officer reports (e.g. illegal activity)
+- **Showcase forests** — Dedicated pages for major reserves (Bandipur, Nagarhole, Dandeli, Bannerghatta, Bhadra, Kudremukh)
+
+The app supports **two user roles**: general users (registration/login) and **forest officers** (officer login), with a responsive React UI and a REST API backend.
+
+---
 
 ## ✨ Features
 
-- **Resource Management**: Track and manage forest resources including flora, fauna, and other natural assets
-- **Activity Logging**: Record and monitor forest management activities and operations
-- **Data Visualization**: View forest data through intuitive dashboards and reports
-- **User Authentication**: Secure login and role-based access control
-- **Database Management**: Robust MySQL database for reliable data storage and retrieval
-- **Responsive Design**: Modern, mobile-friendly interface built with React
+| Area | Features |
+|------|----------|
+| **Animals** | Land, water, and air animals; insects — view and manage species data |
+| **Resources** | Timber, non-timber forest products, minerals, ecological & cultural services |
+| **Water bodies** | Rivers, lakes, streams, waterfalls, ponds, reservoirs — catalog and monitor |
+| **Forests** | Overview and detailed pages for 6 major forests/reserves |
+| **Tourism** | Tourism information and tourism records |
+| **Community** | Community engagement and suggestions |
+| **Reporting** | Illegal activity reporting with optional image upload |
+| **Officer portal** | Dedicated login and workflows for forest officers |
+| **Auth** | User registration, login, and role-based access |
+
+---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React** - UI library for building interactive user interfaces
-- **Vite** - Next-generation frontend build tool
-- **ESLint** - Code quality and consistency
+| Layer | Technologies |
+|-------|--------------|
+| **Frontend** | React 19, React Router 7, Vite 6, Axios, ESLint |
+| **Backend** | Node.js, Express 5, body-parser, CORS, Multer (file uploads) |
+| **Database** | MySQL (mysql2 driver) |
 
-### Backend
-- **Node.js** - JavaScript runtime environment
-- **Express.js** - Web application framework
-- **MySQL** - Relational database management system
+---
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed:
-- Node.js (v14 or higher)
-- npm or yarn
-- MySQL Server (v5.7 or higher)
+- **Node.js** v18+ (LTS recommended)
+- **npm** or **yarn**
+- **MySQL** 5.7+ or 8.x (running locally or remotely)
 
-## 🚀 Installation
+---
 
-### 1. Clone the Repository
+## 🚀 Quick Start
+
+### 1. Clone the repository
+
 ```bash
-git clone https://github.com/Harshavardhana-v/Forest-management.git
-cd Forest-management
+git clone https://github.com/lokeshpuma/Forest_Harmony.git
+cd Forest_Harmony
 ```
 
-### 2. Install Frontend Dependencies
-```bash
-npm install
-```
+### 2. Database setup
 
-### 3. Install Backend Dependencies
+1. Create a MySQL database (e.g. `forest_app1`).
+2. Import your schema (run your `.sql` scripts or migrations if you have them).
+3. Note the host, user, password, and database name for the backend.
+
+### 3. Backend setup
+
 ```bash
 cd forest-backend
 npm install
-cd ..
 ```
 
-### 4. Database Setup
-1. Start your MySQL server
-2. Navigate to the `project-dbms` folder
-3. Import the database schema:
-```bash
-mysql -u your_username -p < database_schema.sql
-```
-4. Update database credentials in the backend configuration file
+Create a `.env` file in `forest-backend/` (or update `forest-backend/db.js` directly for local dev):
 
-### 5. Configure Environment Variables
-Create a `.env` file in the `forest-backend` directory:
 ```env
 DB_HOST=localhost
-DB_USER=your_mysql_username
-DB_PASSWORD=your_mysql_password
-DB_NAME=forest_management
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=forest_app1
 PORT=5000
 ```
 
-## 🎯 Usage
+Start the API server:
 
-### Start the Backend Server
 ```bash
-cd forest-backend
 npm start
 ```
-The backend server will run on `http://localhost:5000` (or your configured port)
 
-### Start the Frontend Development Server
-In a new terminal, from the root directory:
+The backend runs at **http://localhost:5000**.
+
+### 4. Frontend setup
+
+From the **project root** (not inside `forest-backend`):
+
 ```bash
+npm install
 npm run dev
 ```
-The application will be available at `http://localhost:5173`
 
-### Build for Production
-```bash
-npm run build
+The app runs at **http://localhost:5173**.
+
+### 5. Use the app
+
+- Register or log in as a user.
+- Use **Forest Officers** to log in as an officer.
+- Navigate via the dashboard to Animals, Resources, Water Bodies, Forests, Tourism, Community, Data Management, and Illegal Activity Report.
+
+---
+
+## 📁 Project structure
+
+```
+Forest-management-master/
+├── forest-backend/           # Express API server
+│   ├── routes/
+│   │   ├── login.js
+│   │   ├── register.js
+│   │   ├── animals.js
+│   │   ├── resources.js
+│   │   ├── waterbodies.js
+│   │   ├── tourism.js
+│   │   ├── suggestions.js
+│   │   ├── report.js
+│   │   └── OfficerLogin.js
+│   ├── uploads/              # Uploaded files (e.g. report images)
+│   ├── db.js                 # MySQL connection
+│   └── index.js              # App entry, CORS, routes
+├── src/                      # React frontend
+│   ├── App.jsx               # Routes and layout
+│   ├── main.jsx
+│   ├── Dashboard.jsx
+│   ├── Animals.jsx, LandAnimals.jsx, WaterAnimals.jsx, AirAnimals.jsx, Insects.jsx
+│   ├── Resources.jsx, Timber.jsx, NonTimber.jsx, EcologicalCulturalServices.jsx, Minerals.jsx
+│   ├── WaterBodies.jsx, Rivers.jsx, Lakes.jsx, Streams.jsx, Waterfalls.jsx, Ponds.jsx, Reservoirs.jsx
+│   ├── Forests.jsx, BandipurPage.jsx, DandeliPage.jsx, NagarholePage.jsx, ...
+│   ├── Tourism.jsx, TourismRecords.jsx
+│   ├── Community.jsx, DataManagement.jsx
+│   ├── IllegalActivityReport.jsx, OfficerLogin.jsx
+│   ├── Login.jsx, Registration.jsx
+│   └── *.css
+├── public/
+├── index.html
+├── vite.config.js
+├── package.json              # Frontend deps and scripts
+└── README.md
 ```
 
-## 📁 Project Structure
+---
 
-```
-Forest-management/
-├── Forest-management/     # Additional project files
-├── forest-backend/        # Backend Express.js application
-│   ├── routes/           # API routes
-│   ├── models/           # Database models
-│   └── controllers/      # Request handlers
-├── project-dbms/         # Database schemas and scripts
-├── public/               # Static assets
-├── src/                  # React frontend source code
-│   ├── components/       # React components
-│   ├── pages/           # Page components
-│   └── utils/           # Utility functions
-├── index.html           # HTML entry point
-├── package.json         # Frontend dependencies
-└── vite.config.js       # Vite configuration
-```
+## 🔌 API overview
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/register` | User registration |
+| POST | `/login` | User login |
+| POST | `/api/forestofficers/*` | Officer auth and actions |
+| GET | `/animals/land`, `/animals/water`, `/animals/air`, `/animals/insects` | Animal data by category |
+| GET | `/resources/timber`, `/resources/non-timber`, etc. | Resource data |
+| — | `/waterbodies/*` | Water body CRUD |
+| — | `/tourism/*` | Tourism data |
+| — | `/api/suggestions` | Community suggestions |
+| — | `/report/*` | Illegal activity reports (with file upload) |
+| GET | `/uploads/*` | Serve uploaded files |
+
+---
+
+## 📜 Scripts
+
+| Command | Where | Description |
+|--------|--------|-------------|
+| `npm run dev` | Root | Start Vite dev server (frontend) |
+| `npm run build` | Root | Production build (frontend) |
+| `npm run preview` | Root | Preview production build |
+| `npm run lint` | Root | Run ESLint |
+| `npm start` | `forest-backend/` | Start Express API server |
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
+1. Fork the repo.
+2. Create a branch: `git checkout -b feature/your-feature`.
+3. Commit: `git commit -m 'Add your feature'`.
+4. Push: `git push origin feature/your-feature`.
+5. Open a Pull Request on GitHub.
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a Pull Request
+---
 
 ## 📝 License
 
 This project is open source and available for educational and non-commercial use.
 
+---
+
 ## 👨‍💻 Author
 
-**Harshavardhana V**
-
-- GitHub: [@Harshavardhana-v](https://github.com/Harshavardhana-v)
-
-## 🙏 Acknowledgments
-
-- Built with React and Vite for optimal development experience
-- Express.js for robust backend API development
-- MySQL for reliable data management
+**Lokesh**  
+- GitHub: [@lokeshpuma](https://github.com/lokeshpuma)
 
 ---
 
-**Note**: This is a full-stack project developed for forest management purposes. For any issues or feature requests, please open an issue on GitHub.
+*Forest Harmony — manage forests, biodiversity, and conservation in one place.*
