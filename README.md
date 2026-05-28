@@ -130,6 +130,10 @@ INSERT INTO officers (username, officer_id, password)
 VALUES ('admin', 'FH001', 'Admin@123');
 ```
 
+GitHub Pages officer login URL:
+
+- `https://lokeshpuma.github.io/Forest_Harmony/#/forestofficers`
+
 ---
 
 ## 📁 Project structure

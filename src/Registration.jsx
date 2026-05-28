@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { Link, useNavigate } from "react-router-dom"; // For navigation
 import "./Registration.css";
 
 const Registration = () => {
@@ -66,8 +66,11 @@ const Registration = () => {
             />
           </div>
           <button type="submit">Register</button>
+          <p style={{ marginBottom: "0.5rem" }}>
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
           <p style={{ marginBottom: "1rem" }}>
-          Already have an account? <a href="/login">Login</a>
+            Admin/Officer? <Link to="/forestofficers">Officer Login</Link>
           </p>
         </form>
       </div>

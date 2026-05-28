@@ -21,7 +21,7 @@ const OfficerLogin = () => {
       const data = await res.json();
   
       if (data.success) {
-        navigate('/officer-dashboard');
+        navigate('/dashboard');
       } else {
         alert(data.message || 'Invalid credentials');
       }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
@@ -54,6 +54,9 @@ const Login = () => {
               />
             </div>
             <button type="submit">Login</button>
+            <p style={{ marginTop: "0.75rem", textAlign: "center" }}>
+              Admin/Officer? <Link to="/forestofficers">Officer Login</Link>
+            </p>
           </form>
         </div>
       </div>
