@@ -115,6 +115,21 @@ The app runs at **http://localhost:5173**.
 - Use **Forest Officers** to log in as an officer.
 - Navigate via the dashboard to Animals, Resources, Water Bodies, Forests, Tourism, Community, Data Management, and Illegal Activity Report.
 
+### 6. Demo admin account (officer login)
+
+Use this sample officer account to explore admin features:
+
+- **Username:** `admin`
+- **Officer ID:** `FH001`
+- **Password:** `Admin@123`
+
+If this account is not yet present in your database, run:
+
+```sql
+INSERT INTO officers (username, officer_id, password)
+VALUES ('admin', 'FH001', 'Admin@123');
+```
+
 ---
 
 ## 📁 Project structure
